@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="barami_game_system-imgFile" value="C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/_ide/bootimage/BOOT.bin"/>
+	<item key="barami_game_system-offSet" value=""/>
+	<item key="barami_game_system-initFile" value="C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf"/>
+	<item key="barami_game_system-flashType" value="qspi-x4-single"/>
+	<item key="barami_game_system-verifyFlash" value="false"/>
+	<item key="barami_game_system-blankCheck" value="false"/>
+	<item key="barami_game_system-device" value="Auto Detect"/>
+	<item key="barami_game_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="barami_game_system"/>
+</section>

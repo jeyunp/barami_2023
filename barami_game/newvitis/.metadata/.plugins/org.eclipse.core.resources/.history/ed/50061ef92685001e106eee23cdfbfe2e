@@ -1,0 +1,231 @@
+#include "xil_printf.h"
+#include "xil_types.h"
+#include "xstatus.h"
+#include "xllfifo.h"
+#include "xparameters.h"
+#include "xiic.h"
+#include "xgpio.h"
+#include <sleep.h>
+#include <math.h>
+
+enum adauRegisterAddresses {
+R0_LEFT_ADC_VOL     = 0x00,
+R1_RIGHT_ADC_VOL    = 0x01,
+R2_LEFT_DAC_VOL     = 0x02,
+R3_RIGHT_DAC_VOL    = 0x03,
+R4_ANALOG_PATH      = 0x04,
+R5_DIGITAL_PATH     = 0x05,
+R6_POWER_MGMT       = 0x06,
+R7_DIGITAL_IF       = 0x07,
+R8_SAMPLE_RATE      = 0x08,
+R9_ACTIVE           =0x09,
+R15_SOFTWARE_RESET  = 0x0F,
+R16_ALC_CONTROL_1   = 0x10,
+R17_ALC_CONTROL_2   = 0x11,
+R18_ALC_CONTROL_2   = 0x12
+};
+
+int CodecWrite(XIic*, u8 Address, u16 data);
+XStatus CodecInit(XIic *Iic);
+
+
+//define some constants for audio
+#define MAX_length 1000000
+//#define PERIODSAMPLES 256
+#define notelen 60
+
+//left and right channel data storing array
+//u16 right[MAX_length][PERIODSAMPLES];
+//u16 left[MAX_length][PERIODSAMPLES];
+u16 right[MAX_length];
+u16 left[MAX_length];
+
+
+void data_write(XLlFifo* fifo_i2s,u16 left,u16 right) {
+	while ( !XLlFifo_iTxVacancy(fifo_i2s) ) {
+		xil_printf("I2S FIFO full. Waiting ... \n\r");
+	}
+	XLlFifo_TxPutWord(fifo_i2s, ((u32)right<<16) | (u32)left);
+	XLlFifo_iTxSetLen(fifo_i2s, 4);
+}
+
+
+int note(double freq, double length, int offset, XGpio* Gpio0, XLlFifo* fifo_i2s){
+	for(int i=0; i<48000*length; i++){
+		right[i]=((u16) (cos((double)((i*(freq)))/48000*2*M_PI) * 32768));
+		left[i]=((u16) (cos((double)((i*(freq)))/48000*2*M_PI) * 32768));
+	}
+	/*for(int j=0;j<notelen*length;j++) {
+		for(int i=0;i<PERIODSAMPLES;i++) {
+			right[offset+j][i]=((u16) (cos((double)((i*(freq)))/39062.5*2*M_PI) * 32768));
+			left[offset+j][i]=((u16) (cos((double)((i*(freq)))/39062.5*2*M_PI) * 32768));
+		}
+	}
+	for(int j=0;j<2;j++) {
+		for(int i=0;i<PERIODSAMPLES;i++) {
+			right[(int)(offset+notelen*length+j)][i]=0;
+			left[(int)(offset+notelen*length+j)][i]=0;
+		}
+	}*/
+
+	XGpio_DiscreteWrite(Gpio0, 1, 0x1);				//trigger_note
+	usleep(1);
+	XGpio_DiscreteWrite(Gpio0, 1, 0x0);
+	for(int i=0;i<48000*length;i++) {
+   		data_write(fifo_i2s,(u16)left[i],(u16)right[i]);
+	}
+	/*for(int j=offset;j<offset+notelen*length+2;j++) {
+			for(int i=0;i<PERIODSAMPLES;i++) {
+	   			data_write(fifo_i2s,(u16)left[j][i],(u16)right[j][i]);
+		    }
+		}*/
+	return offset;
+	//return offset+notelen*(length)+2;
+}
+
+
+
+int main(void)
+{
+    XIic Iic;
+    XLlFifo fifo_i2s;
+    int status;
+    XGpio Gpio0, Gpio1;
+    int notenum =0;
+    double freq[100];
+    double length[100];
+
+
+    xil_printf("IIC Start\n");
+
+    // Codec Initialization
+    status = CodecInit(&Iic);
+    if(status !=XST_SUCCESS) {
+    xil_printf("Error Codec Initialization");
+    return XST_FAILURE;
+    }
+
+        // AXI i2s Initialization
+    XLlFifo_Config *pConfig = XLlFfio_LookupConfig(XPAR_AXI_FIFO_MM_S_0_DEVICE_ID);
+    int xStatus = XLlFifo_CfgInitialize(&fifo_i2s,pConfig,pConfig->BaseAddress);
+	if(XST_SUCCESS != xStatus) {
+		return -4;
+	}
+
+	// Check for the Reset value
+	u32 Status = XLlFifo_Status(&fifo_i2s);
+	XLlFifo_IntClear(&fifo_i2s,0xffffffff);
+	Status = XLlFifo_Status(&fifo_i2s);
+	if(Status != 0) {
+		return -5;
+	}
+
+	// AXI GPIO Initialization
+	status = XGpio_Initialize(&Gpio0, XPAR_GPIO_0_DEVICE_ID);
+    if(status != XST_SUCCESS) {
+    	return XST_FAILURE;
+	}
+	status = XGpio_Initialize(&Gpio1, XPAR_GPIO_1_DEVICE_ID);
+   	if(status != XST_SUCCESS){
+   		return XST_FAILURE;
+	}
+
+	// Port Direction
+   	XGpio_SetDataDirection(&Gpio0, 1, 0x0);  // output
+   	XGpio_SetDataDirection(&Gpio1, 1, 0x1); // input
+
+    //i2s code
+
+    xil_printf("Number of available FIFO entries: %d\n\r",(int)XLlFifo_iTxVacancy(&fifo_i2s));
+
+    //Building notes
+    freq[notenum] = 262;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 294;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 330;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 349;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 392;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 440;
+    length[notenum] = 1;
+    notenum++;
+    freq[notenum] = 494;
+    length[notenum] = 1;
+    notenum++;
+
+    int offset=0;
+    xil_printf("note_start %d\n", notenum);
+    sleep(10);
+
+    for(int i = 0; i<notenum; i++){
+    	offset=note(freq[i], length[i], offset, &Gpio0, &fifo_i2s);
+    	xil_printf("%d", offset);
+
+    	/*if(XGpio_DiscreteRead(&Gpio0, 1) == 0x2){
+    		xil_printf("a");
+    		break;
+    	}*/
+    }
+
+
+    XGpio_DiscreteWrite(&Gpio1, 1, 0x2);
+    sleep(10);
+	xil_printf("Good bye\n\r");
+
+    return 0;
+}
+
+// Write Audio Codec Register
+int CodecWrite(XIic* Iic, u8 Address, u16 data){
+u8 Device_Address = 0x1A;       // Device ID
+UINTPTR BaseAddress = Iic->BaseAddress; // AXI IIC BaseAddress
+int num;                        // Number of Data sent
+
+    // set write date
+u8 WR_data[2];
+Address = ((Address<<1)& 0xFE);
+WR_data[0]= Address + ((data>>8)&0x01);
+WR_data[1]= (data&0xFF);
+
+    // send data
+num = XIic_Send(BaseAddress, Device_Address, WR_data, 2, XIIC_STOP);
+if(num!=2){
+xil_printf("Writing data Failed\r\n");
+return XST_FAILURE;
+}
+return XST_SUCCESS;
+}
+
+// Audio Codec Initialization
+XStatus CodecInit(XIic* Iic){
+int status;
+
+    // Initializes XIic instance.
+status = XIic_Initialize(Iic, XPAR_IIC_0_DEVICE_ID);
+if (status !=XST_SUCCESS){
+return XST_FAILURE;
+}
+
+    // Codec register settings
+CodecWrite(Iic, R6_POWER_MGMT,    0x77); // power on
+CodecWrite(Iic, R0_LEFT_ADC_VOL,  0x97);
+CodecWrite(Iic, R1_RIGHT_ADC_VOL, 0x97);
+CodecWrite(Iic, R2_LEFT_DAC_VOL,  0x79);
+CodecWrite(Iic, R3_RIGHT_DAC_VOL, 0x79);
+CodecWrite(Iic, R4_ANALOG_PATH,   0x10);
+CodecWrite(Iic, R5_DIGITAL_PATH,  0x00);
+CodecWrite(Iic, R7_DIGITAL_IF,    0x53);
+CodecWrite(Iic, R8_SAMPLE_RATE,   0x41);
+usleep(80000);  // wait for charging capacity on the VMID pin t=C*25000/3.5
+CodecWrite(Iic, R9_ACTIVE,        0x01);  // digital core active
+CodecWrite(Iic, R6_POWER_MGMT,    0x67);
+return XST_SUCCESS;
+}

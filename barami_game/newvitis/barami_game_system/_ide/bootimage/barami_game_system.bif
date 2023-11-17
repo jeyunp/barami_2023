@@ -1,0 +1,12 @@
+/* C:/Users/Jeyun/AppData/Local/Temp/bootgen_barami_game_system4403092723583943866/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*design_1_wrapper*/
+the_ROM_image:
+{
+ [bootloader] C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+ C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/_ide/bitstream/design_1_wrapper.bit
+ C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/Debug/barami_game.elf
+}

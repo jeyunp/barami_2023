@@ -1,0 +1,31 @@
+Nothing to build in platform 'design_1_wrapper'
+
+22:21:52 **** Incremental Build of configuration Debug for project barami_game ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: barami_game.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "barami_game.elf"  ./src/helloworld.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: barami_game.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size barami_game.elf  |tee "barami_game.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  37773	   1208	4022584	4061565	 3df97d	barami_game.elf
+'Finished building: barami_game.elf.size'
+' '
+22:21:53 **** Incremental Build of configuration Debug for project barami_game_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 8829 C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/system.bif --bitstream C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/Debug/barami_game.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

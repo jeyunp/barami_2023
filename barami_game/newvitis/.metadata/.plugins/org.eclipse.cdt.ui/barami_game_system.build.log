@@ -1,0 +1,10 @@
+22:21:53 **** Incremental Build of configuration Debug for project barami_game_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 8829 C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm standalone_ps7_cortexa9_0 C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/system.bif --bitstream C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/Debug/barami_game.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2022.2/bin/bootgen  -image C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/newvitis/barami_game_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+22:21:59 Build Finished (took 5s.981ms)
+

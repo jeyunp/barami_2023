@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Nov 16 21:31:05 2023
+# Process ID: 9384
+# Current directory: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35900 C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\GraphicTop\GraphicTop.xpr
+# Log file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/vivado.log
+# Journal file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop\vivado.jou
+# Running On: DESKTOP-O6GVJKR, OS: Windows, CPU Frequency: 3686 MHz, CPU Physical cores: 10, Host memory: 16908 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.xpr
+update_compile_order -fileset sources_1
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.tmp c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/component.xml
+ipx::current_core c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/component.xml
+update_compile_order -fileset sources_1
+current_project GraphicTop
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+current_project edit_ip_project
+close_project
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.tmp c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/component.xml
+ipx::current_core c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop

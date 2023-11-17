@@ -1,0 +1,336 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Nov 16 22:51:44 2023
+# Process ID: 15212
+# Current directory: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37380 C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.xpr
+# Log file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/vivado.log
+# Journal file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game\vivado.jou
+# Running On: DESKTOP-O6GVJKR, OS: Windows, CPU Frequency: 3686 MHz, CPU Physical cores: 10, Host memory: 16908 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-151] The current board 'digilentinc.com::zybo-z7-10:1.1' is from a local repo. The vivado install has a corresponding board with version greater than or equal to the local repo board. Please use boards from vivado install to avoid any upgrade/migrate issues
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game_2/mypara2seri'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_GraphicTop_0_2
+
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1795.969 ; gain = 357.941
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:c_counter_binary:12.0 - c_counter_binary_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:axi_iic:2.1 - axi_iic_0
+Adding component instance block -- xilinx.com:ip:axi_fifo_mm_s:4.2 - axi_fifo_mm_s_0
+Adding component instance block -- xilinx.com:user:mypara2seri:1.0 - mypara2seri_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:user:GraphicTop:1.0 - GraphicTop_0
+Successfully read diagram <design_1> from block design file <C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1935.266 ; gain = 95.945
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:GraphicTop:1.0 [get_ips  design_1_GraphicTop_0_2] -log ip_upgrade.log
+Upgrading 'C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_GraphicTop_0_2 to use current project options
+Wrote  : <C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_GraphicTop_0_2] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/reset have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/s00_axis_aclk have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 50000000 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+Wrote  : <C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.srcs\sources_1\bd\design_1\design_1.bd> 
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block GraphicTop_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2645.047 ; gain = 113.836
+catch { config_ip_cache -export [get_ips -all design_1_GraphicTop_0_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_GraphicTop_0_2
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry dbe963c081bd2742 to dir: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0.dcp to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = dbe963c081bd2742; cache size = 7.550 MB.
+export_ip_user_files -of_objects [get_files C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_GraphicTop_0_2_synth_1 -jobs 16
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_GraphicTop_0_2
+[Thu Nov 16 22:53:07 2023] Launched design_1_GraphicTop_0_2_synth_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/design_1_GraphicTop_0_2_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.ip_user_files -ipstatic_source_dir C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/compile_simlib/modelsim} {questa=C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/compile_simlib/questa} {riviera=C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/compile_simlib/riviera} {activehdl=C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+validate_bd_design -force
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/reset have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/s00_axis_aclk have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 50000000 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+report_ip_status -name ip_status 
+make_wrapper -files [get_files C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+Wrote  : <C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry dbe963c081bd2742 to dir: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0.dcp to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = dbe963c081bd2742; cache size = 8.279 MB.
+[Thu Nov 16 22:54:44 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/runme.log
+[Thu Nov 16 22:54:44 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2802.293 ; gain = 0.000
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 2846.281 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.335 . Memory (MB): peak = 3554.840 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.335 . Memory (MB): peak = 3554.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3554.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 3713.594 ; gain = 911.301
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+set_clock_groups -name 50_and_graphic -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks -of_objects [get_pins design_1_i/GraphicTop_0/inst/clock_pix_inst/MMCME2_BASE_inst/CLKOUT1]]
+WARNING: [Vivado 12-5846] Redefining clock group 50_and_graphic
+WARNING: [Vivado 12-5846] Redefining clock group 50_and_graphic
+save_constraints
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Nov 16 23:04:05 2023] Launched synth_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/runme.log
+[Thu Nov 16 23:04:05 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 3835.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.330 . Memory (MB): peak = 3835.184 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.330 . Memory (MB): peak = 3835.184 ; gain = 0.000
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd}
+write_hw_platform -fixed -include_bit -force -file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2022.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {200.0} \
+  CONFIG.CLKOUT1_JITTER {176.932} \
+  CONFIG.CLKOUT1_PHASE_ERROR {161.614} \
+  CONFIG.CLKOUT2_JITTER {175.200} \
+  CONFIG.CLKOUT2_PHASE_ERROR {161.614} \
+  CONFIG.CLKOUT2_USED {false} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.ENABLE_CLOCK_MONITOR {false} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {18.000} \
+  CONFIG.MMCM_CLKIN1_PERIOD {20.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+  CONFIG.NUM_OUT_CLKS {1} \
+  CONFIG.PRIMITIVE {MMCM} \
+  CONFIG.PRIM_IN_FREQ {50} \
+  CONFIG.PRIM_SOURCE {No_buffer} \
+  CONFIG.USE_LOCKED {false} \
+] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.srcs\sources_1\bd\design_1\design_1.bd> 
+validate_bd_design
+clk_domain: design_1_processing_system7_0_0_FCLK_CLK0, clk_domain_1: /clk_wiz_0_clk_out1, clkDomainValSrc_1: DEFAULT, clk_domain_ctrl: 0
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/reset have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	POLARITY = ACTIVE_HIGH 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /mypara2seri_0/s00_axis_aclk have been updated from connected ip, but BD cell '/mypara2seri_0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 50000000 
+Please resolve any mismatches by directly setting properties on BD cell </mypara2seri_0> to completely resolve these warnings.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+make_wrapper -files [get_files C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+Wrote  : <C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\barami_game\barami_game.srcs\sources_1\bd\design_1\design_1.bd> 
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/utils_1/imports/synth_1/TOP.dcp with file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/design_1_wrapper.dcp
+reset_run design_1_clk_wiz_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-1771] Block interface /axi_iic_0/IIC has associated board param 'IIC_BOARD_INTERFACE', which is set to board part interface 'hdmi_in_ddc'. This interface is connected to an external interface /IIC, whose name 'IIC' does not match with the board interface name 'hdmi_in_ddc'.
+This is a visual-only issue - this interface /axi_iic_0/IIC will be connected to board interface 'hdmi_in_ddc'. If desired, please change the name of this port /IIC manually.
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/sim/design_1.v
+Verilog Output written to : c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_clk_wiz_0_1
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry dbe963c081bd2742 to dir: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0.dcp to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_sim_netlist.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.v to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.cache/ip/2022.2/d/b/dbe963c081bd2742/design_1_auto_pc_0_stub.vhdl to c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = dbe963c081bd2742; cache size = 8.279 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_clk_wiz_0_1
+[Fri Nov 17 01:00:03 2023] Launched design_1_clk_wiz_0_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_clk_wiz_0_1_synth_1: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/design_1_clk_wiz_0_1_synth_1/runme.log
+synth_1: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/synth_1/runme.log
+[Fri Nov 17 01:00:03 2023] Launched impl_1...
+Run output will be captured here: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 4095.695 ; gain = 5.199
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/barami_game.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 4095.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 148 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.496 . Memory (MB): peak = 4095.695 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.496 . Memory (MB): peak = 4095.695 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 4095.695 ; gain = 0.000
+write_hw_platform -fixed -include_bit -force -file C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/barami_game/design_1_wrapper.xsa
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 17 01:14:45 2023...

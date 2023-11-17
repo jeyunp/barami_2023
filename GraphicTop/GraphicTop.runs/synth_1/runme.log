@@ -1,0 +1,319 @@
+
+*** Running vivado
+    with args -log GraphicTop.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source GraphicTop.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source GraphicTop.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.runs/synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/utils_1/imports/synth_1/GraphicTop.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/utils_1/imports/synth_1/GraphicTop.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top GraphicTop -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23348
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'finish', assumed default net type 'wire' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/gfx_inst.v:74]
+INFO: [Synth 8-11241] undeclared symbol 'miss', assumed default net type 'wire' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/gfx_inst.v:93]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1454.273 ; gain = 407.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'GraphicTop' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/GraphicTop.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'clock_720p' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/clock_720p.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79972]
+	Parameter CLKFBOUT_MULT_F bound to: 29.750000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 10 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79972]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'clock_720p' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/clock_720p.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'simple_720p' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/simple_720p.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'simple_720p' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/simple_720p.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'gfx' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/gfx_inst.v:23]
+INFO: [Synth 8-6157] synthesizing module 'background' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/background.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'background' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/background.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'score' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'score_display_1' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score_display_1.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'score_display_1' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score_display_1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'score_display_10' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score_display_10.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'score_display_10' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score_display_10.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'score' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/score.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'note' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/note.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'note' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/note.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'life' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/life.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'life' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/life.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'gfx' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/gfx_inst.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dvi_generator' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/dvi_generator.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'tmds_encoder_dvi' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/tmds_encoder_dvi.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_encoder_dvi' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/tmds_encoder_dvi.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'async_reset' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/async_reset.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'async_reset' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/async_reset.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'oserdes_10b' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/oserdes_10b.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+	Parameter DATA_RATE_OQ bound to: DDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6155] done synthesizing module 'oserdes_10b' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/oserdes_10b.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'dvi_generator' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/dvi_generator.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'tmds_out' [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/tmds_out.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+INFO: [Synth 8-6155] done synthesizing module 'tmds_out' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/tmds_out.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'GraphicTop' (0#1) [C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.srcs/sources_1/new/GraphicTop.sv:8]
+WARNING: [Synth 8-7129] Port sprite_render_ratio[2] in module score_display_10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_render_ratio[1] in module score_display_10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_render_ratio[0] in module score_display_10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_render_ratio[2] in module score_display_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_render_ratio[1] in module score_display_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sprite_render_ratio[0] in module score_display_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.691 ; gain = 508.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.691 ; gain = 508.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.691 ; gain = 508.367
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1566.863 ; gain = 520.539
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   14 Bit       Adders := 6     
+	   2 Input   12 Bit       Adders := 4     
+	   3 Input   12 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 1     
+	   5 Input    5 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	   7 Input    5 Bit       Adders := 3     
+	   9 Input    5 Bit       Adders := 3     
+	   4 Input    5 Bit       Adders := 3     
+	   3 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 3     
+	   4 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               12 Bit    Registers := 6     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   12 Bit        Muxes := 4     
+	   5 Input   10 Bit        Muxes := 6     
+	   2 Input   10 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 18    
+	   2 Input    5 Bit        Muxes := 9     
+	  16 Input    1 Bit        Muxes := 68    
+	   2 Input    1 Bit        Muxes := 29    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1954.816 ; gain = 908.492
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:49 . Memory (MB): peak = 1955.547 ; gain = 909.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:50 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:02 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:02 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |    45|
+|3     |LUT1        |    47|
+|4     |LUT2        |   126|
+|5     |LUT3        |    55|
+|6     |LUT4        |    61|
+|7     |LUT5        |    83|
+|8     |LUT6        |   190|
+|9     |MMCME2_BASE |     1|
+|10    |MUXF7       |    11|
+|11    |OSERDESE2   |     8|
+|12    |FDPE        |     3|
+|13    |FDRE        |   104|
+|14    |FDSE        |    18|
+|15    |IBUF        |     5|
+|16    |OBUF        |     1|
+|17    |OBUFDS      |     4|
++------+------------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------+------+
+|      |Instance               |Module             |Cells |
++------+-----------------------+-------------------+------+
+|1     |top                    |                   |   764|
+|2     |  clock_pix_inst       |clock_720p         |     9|
+|3     |  display_inst         |simple_720p        |   340|
+|4     |  dvi_out              |dvi_generator      |   264|
+|5     |    async_reset_inst   |async_reset        |     3|
+|6     |    encode_ch0         |tmds_encoder_dvi   |    86|
+|7     |    encode_ch1         |tmds_encoder_dvi_3 |    83|
+|8     |    encode_ch2         |tmds_encoder_dvi_4 |    84|
+|9     |    serialize_ch0      |oserdes_10b        |     2|
+|10    |    serialize_ch1      |oserdes_10b_5      |     2|
+|11    |    serialize_ch2      |oserdes_10b_6      |     2|
+|12    |    serialize_chc      |oserdes_10b_7      |     2|
+|13    |  gfx_inst             |gfx                |   111|
+|14    |    life_inst          |life               |     5|
+|15    |    note_inst          |note               |    59|
+|16    |    score_inst         |score              |    46|
+|17    |      score_display_1  |score_display_1    |    10|
+|18    |      score_display_10 |score_display_10   |     6|
+|19    |  tmds_ch0             |tmds_out           |     1|
+|20    |  tmds_ch1             |tmds_out_0         |     1|
+|21    |  tmds_ch2             |tmds_out_1         |     1|
+|22    |  tmds_clk             |tmds_out_2         |     1|
++------+-----------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:02 . Memory (MB): peak = 1964.762 ; gain = 918.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:02 . Memory (MB): peak = 1964.762 ; gain = 918.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:02 . Memory (MB): peak = 1964.762 ; gain = 918.438
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1967.672 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1971.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Synth Design complete, checksum: 2f5af099
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:01:05 . Memory (MB): peak = 1971.309 ; gain = 935.109
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.runs/synth_1/GraphicTop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file GraphicTop_utilization_synth.rpt -pb GraphicTop_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 22:37:28 2023...

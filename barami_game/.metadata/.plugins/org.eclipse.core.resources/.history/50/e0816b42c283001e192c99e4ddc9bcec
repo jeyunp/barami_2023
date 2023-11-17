@@ -1,0 +1,48 @@
+#include "xil_printf.h"
+#include "xil_types.h"
+#include "xstatus.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xgpio.h"
+#include <sleep.h>
+#include <stdio.h>
+
+
+
+
+
+int main(void)
+{
+	int status;
+	XGpio Gpio0, Gpio1;
+	xil_printf("Start");
+
+	// AXI GPIO Initialization
+	status = XGpio_Initialize(&Gpio0, XPAR_GPIO_0_DEVICE_ID);
+    if(status != XST_SUCCESS) {
+	    return XST_FAILURE;
+	}
+	status = XGpio_Initialize(&Gpio1, XPAR_GPIO_1_DEVICE_ID);
+   	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+   	// Port Direction
+   	XGpio_SetDataDirection(&Gpio0, 1, 0x1);  // input
+   	XGpio_SetDataDirection(&Gpio1, 1, 0x3); // output*/
+
+
+   	XGpio_DiscreteWrite(&Gpio1, 1, 0x1);
+   	sleep(1);
+   	XGpio_DiscreteWrite(&Gpio1, 1, 0x0);
+   	sleep(5);
+   	XGpio_DiscreteWrite(&Gpio1, 1, 0x1);
+   	   	sleep(1);
+   	   	XGpio_DiscreteWrite(&Gpio1, 1, 0x0);
+   	   	sleep(5);
+   	 XGpio_DiscreteWrite(&Gpio1, 1, 0x1);
+   	    	sleep(1);
+   	    	XGpio_DiscreteWrite(&Gpio1, 1, 0x0);
+   	    	sleep(5);
+    return 0;
+}

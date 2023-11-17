@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Nov 16 21:49:13 2023
+# Process ID: 11204
+# Current directory: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27872 C:\Users\Jeyun\Desktop\fpga\barami_project-2023\barami_game\GraphicTop\GraphicTop.xpr
+# Log file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/vivado.log
+# Journal file: C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop\vivado.jou
+# Running On: DESKTOP-O6GVJKR, OS: Windows, CPU Frequency: 3686 MHz, CPU Physical cores: 10, Host memory: 16908 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Jeyun/Desktop/fpga/barami_project-2023/barami_game/GraphicTop/GraphicTop.xpr
